@@ -1,0 +1,11 @@
+version: '3'
+services:
+  quasar:
+    image: djleven/quasar-cordova
+    command: quasar dev  #quasar dev --mode cordova -T android
+    ports:
+      - 8080:8080
+    privileged: true #false
+    volumes:
+      - ./:/app
+      -  /dev/bus/usb:/dev/bus/usb
